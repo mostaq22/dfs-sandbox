@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+<h3>API Registry</h3>
+{% endblock %}
+
+{% block content %}
+<div class="col-lg-8 col-md-10 container d-flex align-items-center justify-content-center">
+  <form class="row g-3" method="post" action="/create-api-registry">
+    {{ form.hidden_tag() }}
+    <div class="col-md-12">
+      <label for="endpoint_name" class="form-label">Endpoint name</label>
+      {{ form.endpoint(class="form-control", placeholder="Type Endpoint") }}
+    </div>
+    <div class="col-md-12">
+      <label for="inputPassword4" class="form-label">Payload</label>
+      {{ form.payload(class="form-control", placeholder="Type Endpoint", rows=5, cols=10) }}
+    </div>
+    <div class="col-md-12">
+      <label for="inputPassword4" class="form-label">Response</label>
+      {{ form.response(class="form-control", placeholder="Type Response", rows=5, cols=10) }}
+    </div>
+    <div class="col-md-12">
+      <label for="inputPassword4" class="form-label">Description</label>
+      {{ form.description(class="form-control", placeholder="Type Response", rows=5, cols=10) }}
+    </div>
+    
+    <div class="col-12">
+      <button type="submit" name="save_add_more" value="save_add_more" class="btn btn-primary">Save & Add More</button>
+      <button type="submit" class="btn btn-primary ">Save & Return to list</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
+
+
+<h3></h3>

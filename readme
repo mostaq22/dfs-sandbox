@@ -1,0 +1,16 @@
+> dasboard - Empty
+> Login
+> User Management
+> Registry Management
+    > create Registry
+        > endpoint_name
+        > payload
+        > response
+        > description
+> Transaction Management
+    > create Transaction
+        > registry_id
+        > created_by
+        > payload
+        > response
+        > description

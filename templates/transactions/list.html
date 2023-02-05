@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+<h3>Transaction List</h3>
+{% endblock %}
+
+{% block content %}
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>CreatedBy</th>
+        <th>Payload</th>
+        <th>Response</th>
+        <th>Description</th>
+    </tr>
+    {% for data in transactions %}
+    <tr>
+        <td>{{ data.id }}</td>
+        <td>{{ data.user_id }}</td>
+        <td><pre>{{ data.payload }}</pre></td>
+        <td><pre>{{ data.response }}</pre></td>
+        <td>{{ data.description }}</td>
+        
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+
+<h3></h3>

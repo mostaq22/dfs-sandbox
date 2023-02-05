@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+<h3>Registry List</h3>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Endpoint Name</th>
+            <th>Description</th>
+        </tr>
+        {% for data in registry %}
+        <tr>
+            <td>{{ data.id }}</td>
+            <td>{{ data.endpoint }}</td>
+            <td>{{ data.description }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+
+<h3></h3>
